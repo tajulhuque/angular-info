@@ -1,0 +1,25 @@
+<div class="card card-block">
+  <div class="card-body">
+    <h4 class="card-title">
+      {{post.question}}
+    </h4>
+    <p class="card-text" [hidden]="answerHidden">
+      {{post.answer}}
+    </p>
+    <div class="btn-toolbar" role="toolbar" aria-label="Show/hide and delete buttons">
+      <div class="btn-group mr-2" role="group" aria-label="Show/hide answer">
+        <button
+          class="btn btn-primary"
+          (click)="toggle()"
+        >Tell Me
+        </button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Delete post">
+        <button
+          class="btn btn-primary"
+          (click) = "deletePost()"
+        >Delete
+        </button>
+      </div>
+    </div>
+</div>

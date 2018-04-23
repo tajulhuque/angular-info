@@ -1,0 +1,10 @@
+<app-post-form
+  (doPostCreate)="addPost($event)"></app-post-form>
+<div class="row">
+  <app-post-detail
+    *ngFor="let j of posts"
+    class="col-6"
+    [post]="j"
+    (doDeletePost)="deletePost($event)">
+  </app-post-detail>
+</div>
