@@ -4,13 +4,14 @@
     <input type="text"
            class="form-control"
            placeholder="Enter the question"
-           #question>
+           [(ngModel)] = "post.question"
+           #question="ngModel">
   </div>
   <div class="form-group">
     <input type="text"
            class="form-control"
            placeholder="Enter the answer"
-           #answer>
+           #answer="ngModel">
   </div>
   <button type="button"
           class="btn btn-primary"

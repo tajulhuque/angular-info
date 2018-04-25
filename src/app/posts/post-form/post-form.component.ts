@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Post } from '../../model/post.model';
 
+
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',
@@ -8,8 +9,13 @@ import { Post } from '../../model/post.model';
 })
 export class PostFormComponent implements OnInit {
 
+  post: Post;
+
   @Output() doPostCreate = new EventEmitter<Post>();
-  constructor() { }
+
+  constructor() {
+    this.post = new Post('', '');
+  }
 
   ngOnInit() {
   }
